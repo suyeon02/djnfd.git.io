@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="wrap8">
+
+        <a href="./index.html"><img class="backbtn" src="./img/backbtn.png" alt=""></a>
+
+        <div class="box">
+
+            <div class="cat">
+
+                <div class="cathead"></div>
+                <div class="catear">
+                    <div class="ear1"></div>
+                    <div class="ear2"></div>
+                </div>
+
+                <div class="cateyes">
+                    <div class="eye1">
+                        <div class="eye12"></div>
+                        <div class="eye11"></div>
+                    </div>
+                    <div class="eye2">
+                        <div class="eye12"></div>
+                        <div class="eye11"></div>
+                    </div>
+                </div>
+
+                <div class="nose"></div>
+
+                <div class="catmouse">
+                    <div class="mouse1">
+                        <div class="catmustache">
+                            <div class="mustache1"></div>
+                            <div class="mustache2"></div>
+                            <div class="mustache3"></div>
+                            <div class="mustache4"></div>
+
+                        </div>
+                    </div>
+                    <div class="mouse2">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrap_box">
+
+
+            <div class="buttonbox">
+                <button class="catearbtn">귀</button>
+                <button class="catheadbtn">머리</button>
+                <button class="cateyesbtn">눈</button>
+                <button class="nosebtn">코</button>
+                <button class="catmousebtn">입</button>
+            </div>
+
+
+            <div class="color_box">
+                <div class="color"></div>
+                <div class="color2"></div>
+                <div class="color3"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+
+        const catear = document.querySelector('.catear')
+        const cateyes = document.querySelector('.cateyes')
+        const nose = document.querySelector('.nose')
+        const catmouse = document.querySelector('.catmouse')
+        const cathead = document.querySelector('.cathead')
+
+        const catearbtn = document.querySelector('.catearbtn')
+        const catheadbtn = document.querySelector('.catheadbtn')
+        const cateyesbtn = document.querySelector('.cateyesbtn')
+        const nosebtn = document.querySelector('.nosebtn')
+        const catmousebtn = document.querySelector('.catmousebtn')
+        const active = document.querySelector('.active')
+
+        const color = document.querySelector('.color')
+        const color2 = document.querySelector('.color2')
+        const color3 = document.querySelector('.color3')
+
+
+
+        catearbtn.addEventListener('click', () => {
+            catear.classList.toggle('active')
+        })
+        catheadbtn.addEventListener('click', () => {
+            cathead.classList.toggle('active')
+        })
+        cateyesbtn.addEventListener('click', () => {
+            cateyes.classList.toggle('active')
+        })
+        nosebtn.addEventListener('click', () => {
+            nose.classList.toggle('active')
+        })
+        catmousebtn.addEventListener('click', () => {
+            catmouse.classList.toggle('active')
+        })
+
+
+
+        color.addEventListener('click', () => {
+
+            document.querySelectorAll(".ear1, .ear2").forEach((ear) => {
+                ear.style.borderBottomColor = "#E09613";
+            });
+
+
+            document.querySelectorAll(".eye1, .eye2").forEach((eye) => {
+                eye.style.backgroundColor = "#666633";
+            });
+
+
+
+            cathead.style.backgroundColor = '#F5B437';
+
+            nose.style.backgroundColor = '#E07B68';
+
+        });
+
+
+
+        color2.addEventListener('click', () => {
+
+            document.querySelectorAll(".ear1, .ear2").forEach((ear) => {
+                ear.style.borderBottomColor = "#DCD7CD";
+            });
+
+
+            document.querySelectorAll(".eye1, .eye2").forEach((eye) => {
+                eye.style.backgroundColor = "#6CC5CE";
+            });
+
+
+            document.querySelectorAll('.mouse1, .mouse2').forEach((part) => {
+                part.style.backgroundColor = "#E8E8E8";
+            });
+
+
+            cathead.style.backgroundColor = '#Ffffff';
+
+            nose.style.backgroundColor = '#FAD6D0';
+
+
+        });
+
+
+
+        color3.addEventListener('click', () => {
+            document.querySelectorAll(".ear1, .ear2").forEach((ear) => {
+                ear.style.borderBottomColor = "";
+            });
+
+
+            document.querySelectorAll(".eye1, .eye2").forEach((eye) => {
+                eye.style.backgroundColor = "";
+            });
+
+
+            document.querySelectorAll('.mouse1, .mouse2').forEach((part) => {
+                part.style.backgroundColor = "";
+            });
+
+
+            cathead.style.backgroundColor = '';
+
+            nose.style.backgroundColor = '';
+
+
+        });
+       
+
+
+
+
+    </script>
+
+</body>
+
+</html>

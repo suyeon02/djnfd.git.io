@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+<body>
+
+    <div id="wrap">
+        <a href="./index.html"><img class="backbtn" src="./img/backbtn.png" alt=""></a>
+        <div class="sky">
+            
+            <div class="morning">
+                <div class="sunbeam"></div>
+                <div class="sun">
+                    <img class="sunimg"  src="./img/자산 89.png" width="250px">
+                </div>
+            </div>
+            
+
+            <div class="moon"></div>
+
+
+            <div class="character_box">
+
+                <div class="character1">
+                    <img src="./img/character1.png" width="100px">
+                </div>
+
+                <div class="character2">
+                    <img src="./img/character2.png" width="100px">
+                </div>
+
+                <div class="character3">
+                    <img src="./img/character4.png" width="100px">
+                </div>
+
+                <div class="character4">
+                    <img src="./img/character3.png" width="100px">
+                </div>
+                
+            </div>
+
+
+            <div class="mount"></div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+ <script>
+
+    const morning = document.querySelector('.morning')
+    const sunbeam = document.querySelector('.sunbeam')
+    const sun = document.querySelector('.sun')
+    const moon = document.querySelector('.moon')
+    const sky = document.querySelector('.sky')
+    const mount = document.querySelector('.mount')
+    
+
+    sun.addEventListener('click', () => {
+        morning.style.bottom = '-350px'
+        moon.style.top = ''
+        mount.style.filter = ''
+        sky.style.background = ''
+        sunbeam.style.opacity = '0'
+        sunbeam.style.transition = 'opacity 1s ease';
+    })
+
+    
+
+    moon.addEventListener('click', () => {
+        morning.style.bottom = '180px'
+        moon.style.top = '100%'
+        mount.style.filter = 'brightness(100%)'
+        sky.style.background = 'skyblue'
+        sunbeam.style.opacity = '1'
+        sunbeam.style.transition = 'opacity 5s ease';
+        sunbeam.style.transitionDelay = '0.5s';
+    })
+
+
+
+
+
+
+ </script>
+
+
+</body>
+</html>

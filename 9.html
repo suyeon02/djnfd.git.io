@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="wrap9">
+
+        <div id="highlight"></div>
+
+        <a href="./index.html"><img class="backbtn" src="./img/backbtn.png" alt=""></a>
+
+        
+        <div class="home">
+
+            <!--어두운 화면-->
+            <div class="darkness"></div>
+
+            <!--배경요소-->
+            <img class="ceilinglight" src="./img/ceilinglight.png" alt="">
+            <img class="home_tv" src="./img/home_tv.png" alt="">
+            <img class="home_tv_display" src="./img/home_tv_display.png" alt="">
+            <img class="gradient" src="./img/gradient.png" alt="">></img>
+            <div class="tvbtn"></div>
+            <img class="home_Drawer" src="./img/home_Drawer.png" alt="">
+            <img class="home_table" src="./img/home_table.png" alt="">
+
+            <!--테이블스탠드-->
+            <img class="tablestand" src="./img/tablestand.png" alt="">
+            <svg id="standlight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.17 49.59">
+                <g>
+                    <g>
+                        <path class="cls-1"
+                            d="M57.76,48.09H3.41c-1.23,0-2.14-1.38-1.86-2.82L9.76,3.27c.2-1.04.97-1.77,1.86-1.77h37.29c.87,0,1.64.71,1.85,1.73l8.84,42c.31,1.45-.61,2.86-1.85,2.86Z" />
+                        <polygon class="cls-1" points="46.84 48.09 14.33 48.09 19.33 1.5 41.45 1.5 46.84 48.09" />
+                        <line class="cls-1" x1="30.43" y1="1.5" x2="30.43" y2="47.88" />
+                    </g>
+                </g>
+            </svg>
+            <svg id="standlight2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.17 49.59">
+                <g>
+                    <g>
+                        <path class="cls-2"
+                            d="M57.76,48.09H3.41c-1.23,0-2.14-1.38-1.86-2.82L9.76,3.27c.2-1.04.97-1.77,1.86-1.77h37.29c.87,0,1.64.71,1.85,1.73l8.84,42c.31,1.45-.61,2.86-1.85,2.86Z" />
+                        <polygon class="cls-2" points="46.84 48.09 14.33 48.09 19.33 1.5 41.45 1.5 46.84 48.09" />
+                        <line class="cls-2" x1="30.43" y1="1.5" x2="30.43" y2="47.88" />
+                    </g>
+                </g>
+            </svg>
+
+            <!--장스탠드-->
+            <img class="longstand" src="./img/long stand.png" alt="">
+            <svg id="standlight3" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.02 149.18">
+                <g>
+                    <g>
+                        <path class="cls-3"
+                            d="M162.07,147.68H6.95c-3.51,0-6.11-4.33-5.3-8.86L25.08,7.06c.58-3.26,2.78-5.56,5.3-5.56h106.45c2.49,0,4.67,2.24,5.28,5.44l25.24,131.77c.87,4.55-1.73,8.98-5.28,8.98Z" />
+                        <polygon class="cls-3" points="130.91 147.68 38.11 147.68 52.39 1.5 115.54 1.5 130.91 147.68" />
+                        <line class="cls-3" x1="84.09" y1="1.5" x2="84.09" y2="147.02" />
+                    </g>
+                </g>
+            </svg>
+
+
+            <div class="light1touch"></div>
+
+
+            <div class="light1"></div>
+            <div class="light2"></div>
+            <div class="light3"></div>
+            <div class="light4"></div>
+
+
+        </div>
+
+
+    </div>
+
+    <script>
+        const light1 = document.querySelector('.light1')
+        const light2 = document.querySelector('.light2')
+        const light3 = document.querySelector('.light3')
+        const light4 = document.querySelector('.light4')
+        const light1touch = document.querySelector('.light1touch')
+        const darkness = document.querySelector('.darkness')
+        const standlight = document.querySelector('#standlight')
+        const standlight2 = document.querySelector('#standlight2')
+        const standlight3 = document.querySelector('#standlight3')
+        const cls_1 = document.querySelectorAll('.cls-1')
+        const cls_2 = document.querySelectorAll('.cls-2')
+        const cls_3 = document.querySelectorAll('.cls-3')
+        const tvbtn = document.querySelector('.tvbtn')
+        const home_tv_display = document.querySelector('.home_tv_display')
+        const gradient = document.querySelector('.gradient')
+
+
+
+        light1.addEventListener('click', () => {
+            light1.style.opacity = '0'
+        });
+
+        light2.addEventListener('click', () => {
+            light2.style.opacity = '0'
+        });
+
+        light3.addEventListener('click', () => {
+            light3.style.opacity = '0'
+        });
+
+        light4.addEventListener('click', () => {
+            light4.style.opacity = '0'
+        });
+
+
+        light1touch.addEventListener('click', () => {
+            light1.style.opacity = '1'
+            light1touch.style.background = '#f3c33f'
+        });
+
+        standlight.addEventListener('click', () => {
+
+            cls_1.forEach((path) => {
+                path.style.fill = '#f3c33f';
+                light2.style.opacity = '1'
+            });
+        });
+
+        standlight2.addEventListener('click', () => {
+            cls_2.forEach((path) => {
+                path.style.fill = '#f3c33f';
+                light3.style.opacity = '1'
+            });
+        });
+
+        standlight3.addEventListener('click', () => {
+            cls_3.forEach((path) => {
+                path.style.fill = '#f3c33f';
+                light4.style.opacity = '1'
+            });
+        });
+
+        tvbtn.addEventListener('click', () => {
+            gradient.style.display = 'block'
+        });
+
+
+        //light버튼을 클릭했을 때 클릭횟수 체크
+        let clicks = 0;
+
+        const buttons = document.querySelectorAll('.light1touch, .standlight, .standlight2, .standlight3, .tvbtn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                clicks++;
+                const darknessopacity = Math.max(1 - clicks * 0.25, 0);
+                darkness.style.opacity = darknessopacity;
+            });
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<body>
+    
+
+    <div id="wrap1">
+
+        <a href="./index.html"><img class="backbtn" src="./img/backbtn.png" alt=""></a>
+
+        <div class="person_container">
+
+            <div class="person_body_container">
+                <div class="person1"></div>
+                <div class="person2"></div>
+                <div class="me"></div>
+                <div class="person3"></div>
+                <div class="person4"></div>
+            </div>
+
+            <div class="person_leg_container">
+                <div class="person1_leg"></div>
+                <div class="person2_leg"></div>
+                <div class="me_leg"></div>
+                <div class="person3_leg"></div>
+                <div class="person4_leg"></div>
+            </div>
+
+        </div>
+
+        <input class="heightControl" type="range" min="0" max="170" value="0">
+
+    </div>
+
+    <script>
+        const heightControl = document.querySelector('.heightControl')
+        const me = document.querySelector('.me')
+
+        heightControl.addEventListener('input', () => {
+
+            me.style.marginBottom = heightControl.value + 'px';
+
+            if (heightControl.value > 120) {
+                me.style.background = 'url(./img/me2.png)';
+                me.style.backgroundSize = 'cover';
+
+            } else {
+                me.style.background = 'url(./img/me.png)';
+                me.style.backgroundSize = 'cover';
+
+            }
+
+
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

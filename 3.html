@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalgona Game</title>
+  
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+
+    <div id="wrap3">
+
+        <a href="./index.html"><img class="backbtn" src="./img/backbtn.png" alt=""></a>
+        <div class="Dalgona_container">
+
+            <div class="Dalgonapan">
+                <div class="Dalgona" data-shape="heart"></div>
+            </div>
+
+        </div>
+
+        <div class="Dalgona_Choice">
+
+            <div class="Dalgona1" data-shape="heart"></div>
+            <div class="Dalgona2" data-shape="star"></div>
+            <div class="Dalgona3" data-shape="um"></div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+
+        const Dalgona = document.querySelector('.Dalgona');
+
+        const Dalgona1 = document.querySelector('.Dalgona1')
+        const Dalgona2 = document.querySelector('.Dalgona2')
+        const Dalgona3 = document.querySelector('.Dalgona3')
+
+        let count = 0;
+
+
+        //달고나 클릭시 클릭한 횟수만큼 이미지 변경
+        Dalgona.addEventListener('click', () => {
+
+            //달고나 dataset으로 모양구별
+            const Dalgonashape = Dalgona.dataset.shape;
+
+            count++;
+
+            //클릭시 흔들리는 애니메이션
+            Dalgona.style.animation = 'shake 0.4s ease';
+
+
+            //하트모양
+            if (Dalgonashape === 'heart') {
+
+                if (count > 20) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_heart4.png')";
+
+                } else if (count > 15) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_heart3.png')";
+
+                } else if (count > 10) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_heart2.png')";
+
+                } else if (count > 5) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_heart1.png')";
+                }
+
+            //별모양
+            } else if (Dalgonashape === 'star') {
+
+                if (count > 20) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_star4.png')";
+
+                } else if (count > 15) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_star3.png')";
+
+                } else if (count > 10) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_star2.png')";
+
+                } else if (count > 5) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_star1.png')";
+                }
+
+            //우산모양
+            } else if (Dalgonashape === 'um') {
+
+                if (count > 20) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_um4.png')";
+
+                } else if (count > 15) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_um3.png')";
+
+                } else if (count > 10) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_um2.png')";
+
+                } else if (count > 5) {
+                    Dalgona.style.backgroundImage = "url('./img/Dalgona_um1.png')";
+                }
+            }
+
+            //달고나를 클릭할 때마다 애니메이션 재생 
+            //애니메이션이 끝난 후 animation을 초기화
+            setTimeout(() => {
+                Dalgona.style.animation = '';
+            }, 500);
+        
+        });
+
+
+
+        // 달고나 모양 선택
+        // 선택시 해당 모양으로 이미지 변경 및 카운트 리셋
+        Dalgona1.addEventListener('click', () => {
+
+            Dalgona.style.backgroundImage = "url('./img/Dalgona_heart.png')";
+            Dalgona.dataset.shape = 'heart';
+            count = 0;
+
+        });
+
+        Dalgona2.addEventListener('click', () => {
+
+            Dalgona.style.backgroundImage = "url('./img/Dalgona_star.png')";
+            Dalgona.dataset.shape = 'star';  
+            count = 0;
+
+        });
+
+        Dalgona3.addEventListener('click', () => {
+
+            Dalgona.style.backgroundImage = "url('./img/Dalgona_um.png')";
+            Dalgona.dataset.shape = 'um';
+            count = 0;
+
+        });
+
+
+
+    </script>
+</body>
+</html>

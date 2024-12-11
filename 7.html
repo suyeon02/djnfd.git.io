@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="wrap7">
+
+        <a href="./index.html"><img class="backbtn" src="./img/backbtn.png" alt=""></a>
+
+        <div class="black"></div>
+
+        <div class="Phone"></div>
+        <div class="Phone_s"></div>
+
+
+        <div class="Computer">
+
+            <div class="Computer_dp"></div>
+            <div class="Computer_pw"></div>
+
+        </div>
+
+        <div class="Switch_container">
+            <div class="Switch">
+                <div class="Switch_on"></div> <!--전화기 스위치-->
+                <div class="Switch_on"></div> <!--컴퓨터 스위치-->
+                <div class="Switch_on"></div> <!--전등 스위치-->
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const Switch = document.querySelector('.Switch')
+        const Computer_dp = document.querySelector('.Computer_dp')
+        const Phone_s = document.querySelector('.Phone_s')
+        const black = document.querySelector('.black')
+        const Switch_on = document.querySelectorAll('.Switch_on');
+
+
+        //4초가 지나면 실행
+        setTimeout(() => {
+
+            //컴퓨터 화면 url 변경
+            Computer_dp.style.background = "url('./img/bluescreen.png')";
+            Computer_dp.style.backgroundSize = "contain";
+            Computer_dp.style.backgroundPosition = "center";
+            Computer_dp.style.backgroundRepeat = "no-repeat";
+
+        }, 4000);
+
+
+        //스위치 요소를 한번에 모아서
+        Switch_on.forEach((Switchs, index) => {
+
+            //스위치 3개 클릭이벤트
+            Switchs.addEventListener('click', () => {
+                
+                //스위치 index[2]를
+                if (index === 2) {
+
+                    //스위치 index[0]과 index[1]이 'Switch_off' 상태와 같다면
+                    if (Switch_on[0].classList.contains('Switch_off') && Switch_on[1].classList.contains('Switch_off')) {
+
+                        //
+                        Switchs.classList.toggle('Switch_off');
+
+                    } 
+                } 
+                
+                else {
+                    Switchs.classList.toggle('Switch_off');
+                }
+            });
+        });
+
+
+
+        Switch_on[0].addEventListener('click', () => {
+
+
+            if (Switch_on[0].classList.contains('Switch_off')) {
+
+                Phone_s.style.animation = 'none';
+            }
+
+
+            else {
+                Phone_s.style.animation = '';
+            }
+
+        });
+
+        Switch_on[1].addEventListener('click', () => {
+
+            if (Switch_on[1].classList.contains('Switch_off')) {
+
+                Computer_dp.style.background = '';
+            }
+
+            else {
+
+                Computer_dp.style.background = "url('./img/bluescreen.png')";
+                Computer_dp.style.backgroundSize = "contain";
+                Computer_dp.style.backgroundPosition = "center";
+                Computer_dp.style.backgroundRepeat = "no-repeat";
+            }
+
+        });
+
+        Switch_on[2].addEventListener('click', () => {
+
+            if (Switch_on[0].classList.contains('Switch_off') && Switch_on[1].classList.contains('Switch_off')) {
+
+                if (Switch_on[2].classList.contains('Switch_off')) {
+
+                    black.style.display = 'block';
+
+                } else {
+
+                    black.style.display = 'none';
+                }
+
+            }
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
